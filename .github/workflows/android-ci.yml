@@ -37,7 +37,7 @@ jobs:
         with:
           file: .github/build.gradle
       - name: setup python
-        uses: actions/setup-python@v5.2.0
+        uses: action-python/pyinstaller-py3.8@v1.0.0
       - name: libvlc install
         run: |
           sudo apt install automake ant autopoint cmake build-essential libtool-bin \
