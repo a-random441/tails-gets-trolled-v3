@@ -10,7 +10,7 @@ import flixel.text.FlxText;
 import lime.app.Application;
 #if desktop
 import Discord.DiscordClient;
-#ens
+#end
 import flixel.FlxSprite;
 import Options;
 import flixel.ui.FlxBar;
