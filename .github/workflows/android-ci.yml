@@ -36,9 +36,9 @@ jobs:
         uses: thecodemonkey/action-get-gradle-version@v1.0
         with:
           file: .github/build.gradle
-      - uses: krdlab/setup-haxe@v1
+      - uses: krdlab/setup-haxe@v1.5.1
         with:
-          haxe-version: 4.2.3
+          haxe-version: 4.2.4
       # Runs a set of commands using the runners shell
       - name: script run line haha
         run: |
