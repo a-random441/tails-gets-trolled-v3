@@ -36,19 +36,9 @@ jobs:
         uses: thecodemonkey/action-get-gradle-version@v1.0
         with:
           file: .github/build.gradle
-      - name: setup python
-        uses: action-python/pyinstaller-py3.8@v1.0.0
-      - name: libvlc install
-        run: |
-          sudo apt install automake ant autopoint cmake build-essential libtool-bin \
-          patch pkg-config protobuf-compiler ragel subversion unzip git \
-          openjdk-8-jre openjdk-8-jdk flex python wget
-      - name: config vlc
-        run: |
-          export ANDROID_SDK=$ANDROID_HOME
-          export ANDROID_NDK=$ANDROID_NDK_HOME
-          export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
-          git clone https://code.videolan.org/videolan/vlc-android.git
+      - name: Install libVLC
+        if: inputs.name == 'Linux'
+        run: sudo apt install libvlc-dev libvlccore-dev
       - uses: krdlab/setup-haxe@v1.5.1
         with:
           haxe-version: 4.2.4
