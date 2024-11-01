@@ -37,7 +37,6 @@ jobs:
         with:
           file: .github/build.gradle
       - name: Install libVLC
-        if: inputs.name == 'Linux'
         run: sudo apt install libvlc-dev libvlccore-dev
       - uses: krdlab/setup-haxe@v1.5.1
         with:
