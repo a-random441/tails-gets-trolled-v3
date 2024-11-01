@@ -38,6 +38,8 @@ jobs:
           file: .github/build.gradle
       - name: Install libVLC
         run: sudo apt install libvlc-dev libvlccore-dev
+      - name: Version Visual Studio SDK projects
+        uses: roryprimrose/set-vs-sdk-project-version@v1.0.6
       - uses: krdlab/setup-haxe@v1.5.1
         with:
           haxe-version: 4.2.4
